@@ -9,10 +9,58 @@ public class MobsMovement : MonoBehaviour  {
     private int _pathIndex = 0;
     private Animator _animator;
     public int _dimension;
+    private bool _canWalk = false;
     // Start is called before the first frame update
-    void Start() {
-        _path = GameObject.FindGameObjectsWithTag("Path" + _dimension);
+    void Awake() {
+        Debug.Log(_path.Length);
+        GameObject pathObj = GameObject.Find("Path" + _dimension);
+        for(int i = 0; i < 16; i++) {
+            _path[i] = pathObj.transform.GetChild(i).gameObject;
+        }
+        _canWalk = true;
         _animator = GetComponent<Animator>();
+    }
+
+    void Start() {
+        // Debug.Log(pathObj);
+        // Debug.Log(pathObj.transform.GetChild(0).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(1).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(2).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(3).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(4).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(5).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(6).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(7).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(8).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(9).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(10).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(11).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(12).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(13).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(14).gameObject);
+        // Debug.Log(pathObj.transform.GetChild(15).gameObject);
+        // GameObject[] _path = {pathObj.transform.GetChild(0).gameObject, pathObj.transform.GetChild(1).gameObject, pathObj.transform.GetChild(2).gameObject,
+        // pathObj.transform.GetChild(3).gameObject, pathObj.transform.GetChild(4).gameObject, pathObj.transform.GetChild(5).gameObject,
+        // pathObj.transform.GetChild(6).gameObject, pathObj.transform.GetChild(7).gameObject, pathObj.transform.GetChild(8).gameObject,
+        // pathObj.transform.GetChild(9).gameObject, pathObj.transform.GetChild(10).gameObject, pathObj.transform.GetChild(11).gameObject,
+        // pathObj.transform.GetChild(12).gameObject, pathObj.transform.GetChild(13).gameObject, pathObj.transform.GetChild(14).gameObject,
+        // pathObj.transform.GetChild(15).gameObject};
+        // _path[0] = pathObj.transform.GetChild(0).gameObject;
+        // _path[1] = pathObj.transform.GetChild(1).gameObject;
+        // _path[2] = pathObj.transform.GetChild(2).gameObject;
+        // _path[3] = pathObj.transform.GetChild(3).gameObject;
+        // _path[4] = pathObj.transform.GetChild(4).gameObject;
+        // _path[5] = pathObj.transform.GetChild(5).gameObject;
+        // _path[6] = pathObj.transform.GetChild(6).gameObject;
+        // _path[7] = pathObj.transform.GetChild(7).gameObject;
+        // _path[8] = pathObj.transform.GetChild(8).gameObject;
+        // _path[9] = pathObj.transform.GetChild(9).gameObject;
+        // _path[10] = pathObj.transform.GetChild(10).gameObject;
+        // _path[11] = pathObj.transform.GetChild(11).gameObject;
+        // _path[12] = pathObj.transform.GetChild(12).gameObject;
+        // _path[13] = pathObj.transform.GetChild(13).gameObject;
+        // _path[14] = pathObj.transform.GetChild(14).gameObject;
+        // _path[15] = pathObj.transform.GetChild(15).gameObject;
     }
 
     // Update is called once per frame
@@ -21,7 +69,7 @@ public class MobsMovement : MonoBehaviour  {
     }
 
     void FixedUpdate() {
-        Move();
+        if(_canWalk) Move();
     }
 
     void Move() {

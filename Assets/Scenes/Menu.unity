@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scene: 1
   _gameOver: 0
+  _menu: 1
 --- !u!4 &1168267444
 Transform:
   m_ObjectHideFlags: 0

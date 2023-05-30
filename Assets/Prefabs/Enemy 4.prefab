@@ -544,7 +544,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1157243a30825c4291e3f193082e3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _path: []
+  _path:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _speed: 1
   _rotationSpeed: 30
   _dimension: 1

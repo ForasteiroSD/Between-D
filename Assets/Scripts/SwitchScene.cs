@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SwitchScene : MonoBehaviour {
     [SerializeField] private int _scene;
     [SerializeField] private bool _gameOver;
+    [SerializeField] private bool _menu = false;
     // Start is called before the first frame update
     void Start() {
         Time.timeScale = 1;
@@ -18,6 +19,10 @@ public class SwitchScene : MonoBehaviour {
             if(Input.GetKey(KeyCode.Return)) SceneManager.LoadScene(2);
             if(Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene(0);
         }
+        else if(_menu) {
+            if(Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+            if(Input.GetKey(KeyCode.Return)) SceneManager.LoadScene(_scene);
+        }
         else {
             if(_scene == 1) if(Input.GetKey(KeyCode.Return)) SceneManager.LoadScene(_scene);
             if(_scene == 2) if(Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene(_scene);
@@ -25,7 +30,7 @@ public class SwitchScene : MonoBehaviour {
     }
 
     IEnumerator StartGame() {
-        yield return new WaitForSeconds(62);
+        yield return new WaitForSeconds(66);
         SceneManager.LoadScene(_scene);
     }
 }

@@ -2063,7 +2063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &279506946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15918,7 +15918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MinimumSpawnTime: 1
-  _MaximumSpawnTime: 1
+  _MaximumSpawnTime: 10
   _enemies:
   - {fileID: 8756588397110804703, guid: bc9e590e965adab4ab96a80f939e7be9, type: 3}
   _dimension: 0
@@ -17590,7 +17590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MinimumSpawnTime: 0
-  _MaximumSpawnTime: 0
+  _MaximumSpawnTime: 10
   _enemies:
   - {fileID: 8756588397110804703, guid: 4eb96e92347021b419c85f1b76f98044, type: 3}
   _dimension: 0
