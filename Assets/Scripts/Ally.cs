@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ally : MonoBehaviour {
     public int _maxLife;
-    public int _currentLife;
+    public float _currentLife;
     public float _attackDelay = 0;
     FloatingHeathBar _heathBar;
     // Start is called before the first frame update
@@ -13,7 +13,7 @@ public class Ally : MonoBehaviour {
     }
 
     void FixedUpdate() {
-
+        _currentLife -= 0.045f;
     }
 
     // Update is called once per frame

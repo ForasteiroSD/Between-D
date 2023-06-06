@@ -7,6 +7,8 @@ public class DimensionChanger : MonoBehaviour {
     public int _MinimumDimensionTime = 3;
     public int _MaximumDimensionTime = 5;
     private int _dimension = 0;
+    public int _controlTime = 0;
+    public int _controlIncrement;
     public GameObject _d1;
     public GameObject _d2;
     private GameObject _gameManager;
@@ -14,7 +16,7 @@ public class DimensionChanger : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         _gameManager = GameObject.Find("GameManager");
-        StartCoroutine(SwitchDimension(UnityEngine.Random.Range(_MinimumDimensionTime, _MaximumDimensionTime)));
+        StartCoroutine(SwitchDimension(Random.Range(_MinimumDimensionTime, _MaximumDimensionTime)));
     }
 
     // Update is called once per frame
@@ -44,6 +46,11 @@ public class DimensionChanger : MonoBehaviour {
             _gameManager.GetComponent<PlotManager>().ResetValue();
             _gameManager.GetComponent<PlotManager>().ResetMine();
         }
-        StartCoroutine(SwitchDimension(UnityEngine.Random.Range(_MinimumDimensionTime, _MaximumDimensionTime)));
+        _controlIncrement += 1;
+        if(_controlIncrement == 10) {
+            _controlTime += 1;
+            _controlIncrement = 0;
+        }
+        StartCoroutine(SwitchDimension(Random.Range(_MinimumDimensionTime + _controlTime, _MaximumDimensionTime + _controlTime)));
     }
 }

@@ -314,7 +314,7 @@ MonoBehaviour:
   _dimension: 1
   _canSpawn: 1
   _canSpawn2: 1
-  _delayToStart: 24
+  _delayToStart: 17
   _controlSpawnTime: 0
   _shortRange: 1
 --- !u!4 &48751589 stripped
@@ -2078,6 +2078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MinimumDimensionTime: 10
   _MaximumDimensionTime: 20
+  _controlTime: 0
+  _controlIncrement: 0
   _d1: {fileID: 1666264173}
   _d2: {fileID: 605311527}
 --- !u!4 &279506947
@@ -2288,8 +2290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.819885, y: -25.00003}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 143.30823, y: -25.00003}
+  m_SizeDelta: {x: 286.6064, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305285164
 MonoBehaviour:
@@ -6323,7 +6325,7 @@ MonoBehaviour:
   _dimension: 1
   _canSpawn: 1
   _canSpawn2: 1
-  _delayToStart: 24
+  _delayToStart: 17
   _controlSpawnTime: 0
   _shortRange: 0
 --- !u!4 &1082664234 stripped
@@ -13228,8 +13230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -134.95105, y: 25}
+  m_SizeDelta: {x: 269.9021, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400242757
 MonoBehaviour:
@@ -16327,6 +16329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scene: 2
   _gameOver: 1
+  _menu: 0
 --- !u!1001 &1901360025
 PrefabInstance:
   m_ObjectHideFlags: 0

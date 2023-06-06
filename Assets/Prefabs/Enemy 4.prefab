@@ -580,7 +580,7 @@ MonoBehaviour:
   _currentLife: 80
   _shortRange: 1
   _attackDelay: 0
-  _moneyDrop: 15
+  _moneyDrop: 20
   _scoreDrop: 275
 --- !u!50 &-5452539352921604738
 Rigidbody2D:
